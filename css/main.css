@@ -3,7 +3,7 @@
 *::before,
 *::after {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 /* Remove default margin */
@@ -81,11 +81,11 @@ select {
   *::before,
   *::after {
     -webkit-animation-duration: 0.01ms !important;
-    animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
     -webkit-animation-iteration-count: 1 !important;
-    animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
     -webkit-transition-duration: 0.01ms !important;
-    transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
 }
@@ -103,21 +103,29 @@ h1 {
   margin: 0px;  
 } */
 nav {
-  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   width: 100%;
   background-color: #4d4d4d;
-  position: relative;
 }
 
 nav .nav-header {
-  display: inline;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 nav .nav-header .nav-title {
-  display: inline-block;
+  /* Cambiar por background img */
+  padding: 10px;
   font-size: 22px;
   color: #fff;
-  padding: 10px 10px 10px 10px;
 }
 
 nav .nav-btn {
@@ -125,17 +133,19 @@ nav .nav-btn {
 }
 
 nav .nav-links {
-  display: inline;
-  float: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   font-size: 18px;
+  gap: 1rem;
 }
 
 nav .nav-links li {
-  display: inline-block;
+  list-style: none;
 }
 
 nav .nav-links a {
-  padding: 13px 10px 13px 10px;
+  padding: 13px 10px;
   text-decoration: none;
   color: #efefef;
 }
@@ -173,19 +183,28 @@ nav #nav-check {
   }
   nav .nav-links {
     position: absolute;
-    display: block;
+    top: 30px;
+    left: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 1rem;
     width: 100%;
-    background-color: #333;
     height: 0px;
+    background-color: #333;
     -webkit-transition: all 0.3s ease-in;
     transition: all 0.3s ease-in;
     overflow-y: hidden;
-    top: 50px;
-    left: 0px;
   }
   nav .nav-links li {
-    display: block;
-    width: 100%;
+    font-size: 1.5rem;
+  }
+  nav .nav-links li:first-child {
+    margin-top: 2rem;
   }
   nav #nav-check:not(:checked) ~ .nav-links {
     height: 0px;
@@ -195,88 +214,4 @@ nav #nav-check {
     overflow-y: auto;
   }
 }
-
-/* nav > .nav-header {
-  display: inline;
-}
-
-nav > .nav-header > .nav-title {
-  display: inline-block;
-  font-size: 22px;
-  color: #fff;
-  padding: 10px 10px 10px 10px;
-}
-
-nav > .nav-btn {
-  display: none;
-}
-
-nav > .nav-links {
-  display: inline;
-  float: right;
-  font-size: 18px;
-}
-
-nav > .nav-links > li {
-  display: inline-block;
-  padding: 13px 10px 13px 10px;
-  text-decoration: none;
-  color: #efefef;
-}
-
-nav > .nav-links > li a:hover {
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
-nav > #nav-check {
-  display: none;
-}
-
-@media (max-width: 600px) {
-  nav > .nav-btn {
-    display: inline-block;
-    position: absolute;
-    right: 0px;
-    top: 0px;
-  }
-  nav > .nav-btn > label {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    padding: 13px;
-  }
-  nav > .nav-btn > label:hover,
-  nav #nav-check:checked ~ .nav-btn > label {
-    background-color: rgba(0, 0, 0, 0.3);
-  }
-  nav > .nav-btn > label > span {
-    display: block;
-    width: 25px;
-    height: 10px;
-    border-top: 2px solid #eee;
-  }
-  nav > .nav-links {
-    position: absolute;
-    display: block;
-    width: 100%;
-    background-color: #333;
-    height: 0px;
-    transition: all 0.3s ease-in;
-    overflow-y: hidden;
-    top: 50px;
-    left: 0px;
-  }
-  nav > .nav-links > li {
-    display: block;
-    width: 100%;
-  }
-  nav > #nav-check:not(:checked) ~ .nav-links {
-    height: 0px;
-  }
-  nav > #nav-check:checked ~ .nav-links {
-    height: calc(100vh - 50px);
-    overflow-y: auto;
-  }
-}
- */
 /*# sourceMappingURL=main.css.map */
