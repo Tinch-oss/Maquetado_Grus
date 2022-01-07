@@ -144,6 +144,25 @@ nav .nav-links li {
   list-style: none;
 }
 
+nav .nav-links .relativa {
+  position: relative;
+}
+
+nav .nav-links .relativa:hover > .absoluta {
+  display: block;
+}
+
+nav .nav-links .relativa .absoluta {
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  display: none;
+  margin-left: -2.5rem;
+}
+
+nav .nav-links .relativa .absoluta li {
+  padding: 0.8rem 0.5rem;
+}
+
 nav .nav-links a {
   padding: 13px 10px;
   text-decoration: none;
@@ -205,6 +224,15 @@ nav #nav-check {
   }
   nav .nav-links li:first-child {
     margin-top: 2rem;
+  }
+  nav .nav-links .absoluta {
+    background-color: transparent;
+  }
+  nav .nav-links .absoluta li {
+    margin-left: 3rem;
+  }
+  nav .nav-links .absoluta li:first-child {
+    margin-top: -0.3rem;
   }
   nav #nav-check:not(:checked) ~ .nav-links {
     height: 0px;
