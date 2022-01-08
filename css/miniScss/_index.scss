@@ -1,3 +1,25 @@
 h2 {
-  color: $color-primary;
+  color: white;
+}
+
+header {
+  .kyotobg {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+    img {
+      grid-column: 1 / 13;
+      grid-row: 1 / 12;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    h2 {
+      font-size: $step-3;
+      grid-column: 5 / 10;
+      grid-row: 3 / 6;
+      background-color: rgba($color: #000000, $alpha: 0.3);
+      padding: 1rem;
+    }
+  }
 }

@@ -1,5 +1,6 @@
 @import "./miniScss/reset";
 @import "./miniScss/variables";
+@import "./miniScss/font";
 @import "./miniScss/index";
 
 h1 {
@@ -53,6 +54,10 @@ nav {
         margin-left: -2.5rem;
         li {
           padding: 0.8rem 0.5rem;
+
+          &:last-child {
+            margin-bottom: -1rem;
+          }
         }
       }
     }

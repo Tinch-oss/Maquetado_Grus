@@ -92,7 +92,38 @@ select {
 
 /* Reset end */
 h2 {
-  color: #d81159;
+  color: white;
+}
+
+header .kyotobg {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+}
+
+header .kyotobg img {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1 / 13;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 11;
+  grid-row: 1 / 12;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+
+header .kyotobg h2 {
+  font-size: clamp(1.94rem, calc(1.59rem + 1.79vw), 2.93rem);
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 5;
+  grid-column: 5 / 10;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 3;
+  grid-row: 3 / 6;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 1rem;
 }
 
 h1 {
@@ -161,6 +192,10 @@ nav .nav-links .relativa .absoluta {
 
 nav .nav-links .relativa .absoluta li {
   padding: 0.8rem 0.5rem;
+}
+
+nav .nav-links .relativa .absoluta li:last-child {
+  margin-bottom: -1rem;
 }
 
 nav .nav-links a {
